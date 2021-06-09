@@ -1,0 +1,62 @@
+* {box-sizing: border-box; }
+#flex {display: flex; flex-wrap: wrap; margin: auto; }
+#flex > div { width: 100%; margin: 0px; padding: 0px; }
+
+#root{
+  display: grid; grid-template-columns: repeat(7, 10%); align-content: center; justify-content: center; 
+}
+
+.product{
+  background: rgb(18,36,0);
+  background: linear-gradient(63deg, rgba(230, 15, 51, 0.95) 0%, rgba(13, 30, 77, 0.85) 100%);
+  display: block;
+  text-align: center;
+  margin: 5px;
+  border-radius: 9px; 
+}
+
+.productImg{
+  height: 90%;
+  width: 90%;
+  border-radius: 5px; 
+  padding: 4px;
+}
+html{
+  background-image: url(https://vokrugsveta.ua/wp-content/uploads/2021/02/GettyImages-1215284011.jpg);
+  color: white;
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.btn {
+  display: inline-block; 
+  background: rgb(141, 150, 158); 
+  color: #fff; 
+  padding: 1rem 1.5rem; 
+  margin: 5px;
+  text-decoration: none; 
+  border-radius: 3px; 
+}
+
+.title{
+  display: block;
+  text-align: center;
+}
+
+#navigation{
+  display: flex;
+  align-content: center;
+  justify-content: center; 
+}
+
+.buyBtn {
+  display: inline-block; 
+  background: rgba(206, 25, 64, 0.60); 
+  color: #fff; 
+  
+  text-decoration: none; 
+  border-radius: 3px; 
+  padding: 5px;
+  margin: 5px;
+}
