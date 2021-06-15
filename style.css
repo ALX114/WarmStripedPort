@@ -2,6 +2,10 @@
 #flex {display: grid; align-items: flex-start; margin: auto; align-content: center; justify-content: center;  grid-template-columns: 10% 90%; }
 #flex > div {  margin: 0px; padding: 0px; }
 
+#flex-buy {display: flex; align-items: flex-start; margin: auto; align-content: center; justify-content: center;  grid-template-columns: 10% 90%; }
+#flex-buy > div {  margin: 0px; padding: 0px; }
+
+
 #root{
   display: grid; grid-template-columns: repeat(5, 19%); align-content: center; justify-content: center; 
   
@@ -45,6 +49,8 @@ html{
   display: grid;
   justify-items: center; 
   align-content: center; 
+  background: linear-gradient(0deg, rgba(65, 228, 214, 0.795) 0%, rgba(13, 31, 194, 0.795) 100%);
+  padding: 1%;
 }
 
 #navigation{
@@ -92,3 +98,4 @@ html{
   width: 50%; height: 50%; margin: 0px; padding: 0px;
   
 } 
+h1{ margin: 0px;}

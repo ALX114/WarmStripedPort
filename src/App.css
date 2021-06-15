@@ -30,7 +30,7 @@ div.cartItem {
 }
 .cartItem > a{
   
-  align-content:flex-start;
+  align-items:flex-start;
   justify-content: flex-start;
   margin: auto;
 }
@@ -61,4 +61,10 @@ div > div.cartItem{
 .img{
   width: 20px;
   height: 20px;
+}
+.viewImage{
+  width: 22%;
+  height: 22%;
+  padding: 1%;
+  border-radius: 3em;
 }

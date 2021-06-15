@@ -6,14 +6,30 @@ function PhoneView(){
     
     
     let phoneID = getCookie("phoneID");
-    console.log(phoneID);
-    console.log(phones[phoneID])
 
-    return(<div>
-      <a>
-      Название: {phones[phoneID].title}
+    return(
+      <div>
+      <div>
+      Название:  {phones[phoneID].title}
+      </div>
+      <Images id={phoneID}/>
+      <a className="desc">
+        <p>Бренд: {phones[phoneID].brand}</p>
+        <p>Процессор: {phones[phoneID].cpu} </p>
+        <p>Батарея: {phones[phoneID].battery}</p>
+        <p>Экран: {phones[phoneID].display}</p>
+        <p>Камера: {phones[phoneID].camera}</p>
+        <p>Встроенная память: {phones[phoneID].memory}</p>
+        <p>Стоимость: {phones[phoneID].price} рублей</p>
       </a>
     </div>)
+}
+
+function Images(props){
+  
+   const items = phones[props.id].images.map((i)=><img className="viewImage" src={i}/>)
+
+  return(items)
 }
 
 

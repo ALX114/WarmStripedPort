@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Оформить заказ</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="src/index.css">
+</head>
+<body>
+
+<h1 class="title"> <img src="https://st2.depositphotos.com/5486388/8133/v/600/depositphotos_81331676-stock-illustration-wolf-logo-template.jpg" width="100px" height="100px" style="border-radius: 90px;"  alt=""><a style="background: rgba(5, 54, 97, 0.795);  border-radius: 25px; padding:7px; ">	&nbsp;ООО покупки покупочки &nbsp;</a></h1> 
+    <div id="navheader"></div>
+<script type="module" src="src/main.jsx"></script>
+<script type="module" src="src/cart.jsx"></script>
+<div id="flex-buy">
+      <div id="navigation"></div> 
+      <div style="margin: 2.5%;">
+         Давайте оформим ваш заказ <br>
+         Фамилия: <input> <br>
+         Имя: <input> <br>
+         Отчество: <input> <br>
+         Введите ваш адрес полностью: <input> <br>
+          <a style="justify-content: flex-start;" id="sum">Сумма заказа:</a>
+         
+  </div>
+    <div id="desc">
+    Просим обратить ваше внимание на наши часы работы <br>
+    Доставка не происходит круглосуточно <br>
+    Если вы отправили заказ после 20:00 по москве, <br>
+    подождите пожалуйста до утра и мы с вами обязательно свяжемся <br> по вашему часовому поясу если все верно указано
+    </div>
+      
+    </div>
+    <h1 class="title">Ваша корзина:</h1>
+    
+  <div id="cart"></div>
+  <a class="btn" href="index.html" onclick="localStorage.clear();alert('Ваш заказ отправлен в обработку, ожидайте');">Отправить заказ</a>
+<script>
+  function getCookie(name) {
+  let matches = document.cookie.match(new RegExp(
+    "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+  ));
+  return matches ? decodeURIComponent(matches[1]) : undefined;
+}
+
+document.getElementById("sum").innerHTML += getCookie("sum")
+</script>
+</body>
+</html>

@@ -5,9 +5,10 @@ import './App.css';
 var itemList = [];
 const value = "value", name = "name", price ="price"
 
+let sum = 0;
 function ItemList(){
   
-  let sum = 0;
+  
   for(let i = 0; i < localStorage.length; i++ ){
   let key = localStorage.key(i);
   let obj = JSON.parse(localStorage.getItem(key));
@@ -19,7 +20,7 @@ function ItemList(){
   sum += obj["sum"];
   }
   
-  
+  setCookie('sum',sum/2);
   const items = itemList.map((item)=>
     <div className="cartItem" id={item.name}>
       <a>{item.id}</a><img className="cartImg" src={item.imgLink}></img> <a>{item.name}</a><a> по цене {item.price}</a> <a>в количестве {item.value}</a><a>сумма равна {item.sum} руб</a>
@@ -32,6 +33,7 @@ function ItemList(){
     {items}
     
     <div id="sum"><a>сумма тележки: {sum} руб</a></div>
+    
     </div>
     )
   
@@ -44,22 +46,33 @@ function ItemList(){
 }
 
 
+
 ReactDOM.render(
   <ItemList />,
   document.getElementById('cart')
 );
-/*
-const listItems = numbers.map((number) =>
-    <li>{number}</li>
-  );
-  return (
-    <ul>{listItems}</ul>
-  );
 
+function setCookie(name, value, options = {}) {
 
-  for(let i = 0; i < localStorage.length; i++ ){
-  let key = localStorage.key(i);
-  cart[key] = JSON.parse(localStorage.getItem(key));
+  options = {
+    path: '/',
+    // при необходимости добавьте другие значения по умолчанию
+    ...options
+  };
+
+  if (options.expires instanceof Date) {
+    options.expires = options.expires.toUTCString();
+  }
+
+  let updatedCookie = encodeURIComponent(name) + "=" + encodeURIComponent(value);
+
+  for (let optionKey in options) {
+    updatedCookie += "; " + optionKey;
+    let optionValue = options[optionKey];
+    if (optionValue !== true) {
+      updatedCookie += "=" + optionValue;
+    }
+  }
+
+  document.cookie = updatedCookie;
 }
-
-  */

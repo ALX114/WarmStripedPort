@@ -4,9 +4,10 @@ import cart from './script.js';
 function App(props) {
   return (
     <div className="product">
-      <div><img className="productImg" onClick={document.cookie = "phoneID =" + props.id} src={props.imgLink} href={props.prodUrl}/></div>
-      <a onClick={
-        document.cookie = "phoneID =" + props.id
+      <div><img className="productImg"  src={props.imgLink} href={props.prodUrl}/></div>
+      <a onClick={() =>{
+        document.cookie = "phoneID = " + props.id
+        }
       } href={props.prodUrl}>
         <p> {props.name } </p>
       </a>
