@@ -6,14 +6,15 @@ var itemList = [];
 const value = "value", name = "name", price ="price"
 
 function ItemList(){
+  
   let sum = 0;
   for(let i = 0; i < localStorage.length; i++ ){
   let key = localStorage.key(i);
   let obj = JSON.parse(localStorage.getItem(key));
   obj["name"] = key;
-  obj["id"] = i;
+  obj["id"] = i+1;
   obj["sum"] = parseInt(obj["price"]) * parseInt(obj["value"])
-  console.log(obj);
+  
   itemList[i] = obj
   sum += obj["sum"];
   }
@@ -21,7 +22,7 @@ function ItemList(){
   
   const items = itemList.map((item)=>
     <div className="cartItem" id={item.name}>
-      <a>{item.id}</a> <a>{item.name}</a> <a>{item.value}</a><a>сумма равна {item.sum} руб</a>
+      <a>{item.id}</a><img className="cartImg" src={item.imgLink}></img> <a>{item.name}</a><a> по цене {item.price}</a> <a>в количестве {item.value}</a><a>сумма равна {item.sum} руб</a>
     </div>
   );
 
@@ -29,7 +30,8 @@ function ItemList(){
   return(
     <div>
     {items}
-    <div>сумма тележки: {sum} руб</div>
+    
+    <div id="sum"><a>сумма тележки: {sum} руб</a></div>
     </div>
     )
   

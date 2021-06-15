@@ -1,37 +1,39 @@
-* {box-sizing: border-box; }
-#flex {display: flex; flex-wrap: wrap; margin: auto; }
-#flex > div { width: 100%; margin: 0px; padding: 0px; }
+* {box-sizing: border-box; ;}
+#flex {display: grid; align-items: flex-start; margin: auto; align-content: center; justify-content: center;  grid-template-columns: 10% 90%; }
+#flex > div {  margin: 0px; padding: 0px; }
 
 #root{
-  display: grid; grid-template-columns: repeat(7, 10%); align-content: center; justify-content: center; 
+  display: grid; grid-template-columns: repeat(5, 19%); align-content: center; justify-content: center; 
+  
 }
 
 .product{
   background: rgb(18,36,0);
-  background: linear-gradient(63deg, rgba(230, 15, 51, 0.95) 0%, rgba(13, 30, 77, 0.85) 100%);
+  background: linear-gradient(63deg, rgba(66, 146, 139, 0.795) 0%, rgba(189, 38, 169, 0.85) 100%);
   display: block;
   text-align: center;
   margin: 5px;
   border-radius: 9px; 
+  
 }
 
 .productImg{
   height: 90%;
   width: 90%;
-  border-radius: 11px; 
+  border-radius: 15px; 
   padding: 4px;
 }
 html{
-  background-image: url(https://vokrugsveta.ua/wp-content/uploads/2021/02/GettyImages-1215284011.jpg);
+  background-attachment: local;
+  background-repeat: no-repeat;
   color: white;
   display: block;
-  height: 100%;
-  width: 100%;
+  background: linear-gradient(63deg, rgba(81, 124, 121, 0.795) 0%, rgba(65, 228, 214, 0.795) 100%)
 }
 
 .btn {
   display: inline-block; 
-  background: rgb(141, 150, 158); 
+  background: rgba(5, 54, 97, 0.795); 
   color: #fff; 
   padding: 1rem 1.5rem; 
   margin: 5px;
@@ -40,37 +42,53 @@ html{
 }
 
 .title{
-  display: block;
-  text-align: center;
+  display: grid;
+  justify-items: center; 
+  align-content: center; 
 }
 
 #navigation{
+  display: grid;
+  justify-items: flex-end;
+  
+  
+}
+
+#navheader{
   display: flex;
-  align-content: center;
-  justify-content: center; 
+  justify-content: flex-end; 
+  align-content: center; 
+  padding-right: 2%;
+}
+#navheader > a{
+  border-radius: 1em;
 }
 
 .buyBtn {
   display: inline-block; 
-  background: rgba(206, 25, 64, 0.60); 
+  background: rgba(204, 188, 41, 0.6); 
   color: #fff; 
   
-  border-color: rgba(206, 25, 64, 0.45);
+  border-color: rgba(206, 203, 25, 0.979);
   text-decoration: none; 
   border-radius: 7px; 
+  border-style: outset double dashed;
   padding: 5px;
   margin: 5px;
 }
+.buyBtn:active{
+  border-style: inset double;
+}
 
-.cartItem{
-  
+#btnClear{
+  display: grid;
+  justify-items: center; 
+  align-content: center; 
+  justify-content: flex-end;
+  grid-template-columns: 100px 50px 100px; grid-template-rows: 50px 50px;
+}
+#btnClear > div{
   display: block;
-  text-align: center;
-  margin: 5px;
-  padding: 15px;
-  border-radius: 9px; 
-}
-div.cartItem {
-  background: rgb(18,36,0);
-  background: linear-gradient(63deg, rgba(230, 15, 51, 0.95) 0%, rgba(13, 30, 77, 0.85) 100%);
-}
+  width: 50%; height: 50%; margin: 0px; padding: 0px;
+  
+} 

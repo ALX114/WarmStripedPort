@@ -4,7 +4,7 @@ import './App.css';
 function Nav(props){
   return(
     <a className="btn" href={props.navUrl}>
-      {props.name}
+      {props.name} <img class="img" src={props.urlImg}/>
     </a>
   )
 }

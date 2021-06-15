@@ -16,15 +16,17 @@
       </style>
   </head>
 <body>
-  <img src="" alt=""> <h1 class="title"> <a style="background: rgb(141, 150, 158); border-radius: 25px; padding:7px; ">	ООО покупки покупочки </a></h1> 
-  <div id="navigation"></div>
+   <h1 class="title"><img src="https://st2.depositphotos.com/5486388/8133/v/600/depositphotos_81331676-stock-illustration-wolf-logo-template.jpg" width="100px" height="100px" style="border-radius: 90px;"  alt=""> <a style="background: rgba(5, 54, 97, 0.795); border-radius: 25px; padding:7px; ">	ООО покупки покупочки </a></h1> 
+
+  
   
   <script type="module" src="/src/main.jsx"></script>
  <script type="module" src="/src/cart.jsx"></script>
- <div id="cart">
-
-   
+ <div id="flex">
+  <div id="navigation"> </div>  
+ <div id="cart">  
  </div>
-<button onclick="localStorage.clear()"> очистка</button>
+</div>
+<div id="btnClear"><button style="border-radius: 7px; background-color: purple; color: white;" onclick="localStorage.clear(); location.reload();"> очистка</button></div>
 </body>
 </html>
